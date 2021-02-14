@@ -5,7 +5,7 @@
 
 ## Getting Started / 어떻게 시작하나요?
 
-https://charactertest.tk/
+http://loverface.tk/
 
-https://play.google.com/store/apps/details?id=com.cottonwood.charactertest
+https://play.google.com/store/apps/details?id=com.cottonwood.loverface
 

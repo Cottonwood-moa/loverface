@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="canonical" href="  https://loverface.tk/">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+  <link rel="icon" href="./images/favicon.ico">
+  <meta name="naver-site-verification" content="3ba4fb6550c2c1d40897ee302f5b31c8fee037fa" />
+  <meta name="description" content="관상으로 보는 연애궁합 테스트">
+  <meta property="og:title" content="관상으로 보는 연애궁합 테스트">
+  <meta property="og:description" content="관상을 보고 연애궁합을 테스트 해드립니다..">
+  <meta property="og:image" content="./images/face-detection.png">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+  <title>관상으로 보는 연애궁합</title>
+  <link rel="stylesheet" href="assets\css\style.css">
+</head>
+
+<body>
+
+  <!-- modal content -->
+
+  <div class="AppContent ">
+
+    <div id="css-only-modals">
+      <input id="modal1" class="css-only-modal-check" type="checkbox" checked />
+      <div class="css-only-modal">
+        <label for="modal1" class="css-only-modal-close"><i class="fa fa-times fa-2x"></i></label>
+        <h2 style="font-weight: bold;">바른사진</h2>
+        <hr />
+        <img src="images\face.png" class="upload2 " style="width: 100%;">
+        <p>#얼굴이 잘보여야 한다네<br>#가장 바르게 올린 사진이<br>#정확한 궁합일세<br>#부디 재미로만 보시게나~</p>
+
+
+      </div>
+      <div id="screen-shade"></div>
+    </div>
+
+
+    <!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+    <div class="header"></div>
+
+    <section class="submain ">
+      <!-- Title and sub title -->
+      <section class="section ">
+        <a href="index.html">
+          <h1 class="title" style="font-weight: bold;">관상으로 보는 연애궁합 테스트</h1>
+        </a>
+        <h2 class="subtitle"># 어디 얼굴 한번 들이대보게나 <br># 내 궁합 좀 봐드리지 </h2>
+
+      </section>
+      <!-- blog container -->
+
+
+      <!-- Gender change -->
+      <!-- <h3 class="pb-2 d-flex justify-content-center" id=gen>성별을 선택하세요</h3>
+    <section class="d-flex justify-content-center">
+        <p class="d-flex align-items-center pr-3" id=female>여자</p>
+        <label for="gender" id="main">
+            <input type="checkbox" id=gender>
+            <div id="tab">
+                <div id="circle"></div>
+            </div>
+            <div id="gender2"></div>
+        </label>
+        <p class="d-flex align-items-center pl-3" id=male>남자</p>
+    </section>
+  </section> -->
+
+
+      <!-- main -->
+
+      <div class="heart">
+        <img src="images\hearts.png">
+      </div>
+
+      <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+      <div class="display-flex" style="display:flex">
+
+
+        <div class="mt-3 container">
+          <div class="image-upload-wrap">
+            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <div class="drag-text">
+              <img src="images\man2.png" class="upload " style="width: 100%;">
+              <h3 class="upload-text mb-5 pb-5 pt-4" style="color:#35465d">남자</h3>
+            </div>
+          </div>
+          <div class="file-upload-content">
+            <img class="file-upload-image " id="face-image">
+            <h3 class = "gengen">남자</h3>
+            <p class="result-message" id=mes1></p>
+            <p class="result-message2" id=mes2></p>
+
+          </div>
+        </div>
+
+        <div class="mt-3 container " id="women">
+          <div class="image-upload-wrap2">
+            <input class="file-upload-input2" type='file' onchange="readURL2(this);" accept="image/*" />
+            <div class="drag-text2">
+              <img src="images\woman2.png" class="upload2 " style="width: 100%;">
+              <h3 class="upload-text2 mb-5 pb-5 pt-4" style="color:#35465d">여자</h3>
+            </div>
+          </div>
+
+          <div class="file-upload-content2">
+            <img class="file-upload-image2 " id="face-image2">
+            <h3 class = "gengen">여자</h3>
+            <p class="result-message5" id=mes3></p>
+            <p class="result-message6" id=mes2></p>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="result-container">
+        <div id="foo"></div>
+        <p class="result-message3" id=mes4></p>
+        <p class="result-message4" id=mes2></p>
+
+        <div id="loading" class="animated bounce">
+            
+    <div class="circ1">
+        
+      <div class="hands1"></div>
+      <div class="body1"></div>
+      <div class="head1">
+      <div class="eye1"></div>
+      </div>
+    </div>
+          <!-- Copyright (c) 2021 by Yehuda malka (https://codepen.io/woodiz/pen/KCrin)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+          <p class="text-center geeks" id=AI><br>
+
+            <span>기</span>
+            <span>다</span>
+            <span>리</span>
+            <span>시</span>
+            <span>게</span>
+            
+
+          </p>
+          
+
+        </div>
+      </div>
+
+      <!-- spinner -->
+
+
+
+
+
+
+
+
+
+      <div id="label-container"></div>
+
+
+
+
+
+      <div class="image-title-wrap">
+        <button type="button" onclick="refreshPage()" class="remove-image"> 다시하기 </button>
+      </div>
+  </div>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <div class="addthis_inline_share_toolbox_k416" style=" text-align: center;"></div>
+
+
+
+  <div id="webcam-container"></div>
+  <!-- ------------------------------------------------------------------------------------------- -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+  <script type="text/javascript">
+    // More API functions here:
+    // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+    // the link to your model provided by Teachable Machine export panel
+    const urlMale = "https://teachablemachine.withgoogle.com/models/GRXv7skf7/";
+    const urlFemale = "https://teachablemachine.withgoogle.com/models/D9A02Nmg2/";
+    let model, webcam, labelContainer;
+    var resultTitle, resultExplain, maleNumber, femaleNumber;
+    var resultTitle2, resultExplain2, resultTitle3, resultExplain3;
+    var choice;
+
+    async function init() {
+      choice = 1;
+      URL = urlMale;
+      const modelURL = URL + "model.json";
+      const metadataURL = URL + "metadata.json";
+      model = await tmImage.load(modelURL, metadataURL);
+      labelContainer = document.getElementById("label-container");
+
+    }
+
+    async function init2() {
+      choice = 2;
+      URL = urlFemale;
+      const modelURL = URL + "model.json";
+      const metadataURL = URL + "metadata.json";
+      model = await tmImage.load(modelURL, metadataURL);
+      labelContainer = document.getElementById("label-container");
+
+    }
+
+    async function predict() {
+      if (choice === 1) {
+        var image = document.getElementById("face-image")
+      } else {
+        var image = document.getElementById("face-image2")
+      }
+      const prediction = await model.predict(image, false);
+      prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+      console.log(prediction);
+
+
+      if (choice === 1) {
+        switch (prediction[0].className) {
+
+          case "강렬한얼굴":
+            maleNumber = 1
+            break;
+
+          case "꽃미남얼굴":
+            maleNumber = 2
+            break;
+
+          case "머리큰얼굴":
+            maleNumber = 3
+            break;
+
+          case "다부진얼굴":
+            maleNumber = 4
+            break;
+
+          case "뭉툭한얼굴":
+            maleNumber = 5
+            break;
+
+
+          default:
+            resultTitle = "알수없음"
+            resultExplain = "좀 더 정확한 사진을 올려주세요!"
+            reultImage = 'images/알수없음'
+
+        }
+      } else if (choice === 2) {
+        switch (prediction[0].className) {
+          case "귀여운얼굴":
+            femaleNumber = 1
+            break;
+
+          case "담백한얼굴":
+            femaleNumber = 2
+            break;
+
+          case "섹시한얼굴":
+            femaleNumber = 3
+            break;
+
+          case "예쁜얼굴":
+            femaleNumber = 4
+            break;
+
+
+          default:
+            resultTitle2 = "알수없음"
+            resultExplain2 = "좀 더 정확한 사진을 올려주세요!"
+            reultImage = 'images/알수없음'
+        }
+      }
+
+
+
+
+
+      //결과 이미지 출력
+
+
+      if (maleNumber && femaleNumber) {
+        // var title = "<div class='" + prediction[0].className + "-character-title'>" + resultTitle + "</div>"
+        // var explain = "<div class='characterl-explain pt-2'>" + resultExplain + "</div>"
+        // var title3 = "<div class='" + prediction[0].className + "-character-title'>" + resultTitle3 + "</div>"
+        // var explain3 = "<div class='characterl-explain pt-2'>" + resultExplain3 + "</div>"
+        // $('.result-message').html(title);
+        // $('.result-message2').html(explain);
+        // $('.result-message5').html(title3);
+        // $('.result-message6').html(explain3);
+
+        if (maleNumber === 1
+          && femaleNumber === 1) {
+          resultTitle2 = "톱니가 맞물려 오래도록 돌아갈 궁합이로다."
+          resultExplain2 = "\
+          이 도사가 보아하니 닮은 점 보다는 다른 점이 많고 그것이 조화로와 서로에게 매력으로 다가오매 \
+          아직 사귀기 전이라면 필히 서로에게 호감이 있을 것이다. \
+          다른 점이 모나게 맞물리는 것이 아니라 좋게 맞물려 \
+          서로에게 부족한 부분을 매꾸며 오래 함께할 수 있을 것이다. \
+          다만, 여자는 친화성이 높아 다른 사람에게 도움을 주려하고 친절하며 사려깊은 상이고 \
+          남자는 눈에 야망이 있어 성공을 향한 열망이 있고 자신의 포부를 실현하기 위해서 많은 시간과 자원을 사용하기 때문에 \
+          여자가 고생을 조금 할 것으로 보이나 이 또한 남자가 감정적으로 안정되고 곁에서 보필한다면 큰 장애물은 아닐지어다. \
+          \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 1
+          && femaleNumber === 2) {
+          resultTitle2 = "멈추지 않는 말에 함께 올라탄 궁합이로다."
+          resultExplain2 = " \
+         이 도사가 보아하니 두 사람 모두 자신의 발전과 성공에 노력을 기울이어 자신의 발전과 나은 사람이 되기 위해 \
+         애를 쓴다는 공통점이 있구나. 남여 모두 다른 사람과의 친밀한 관계보다는 자신이 목표로 하는 일에 집중하는 편이며, \
+         다른 사람의 감정을 보살피기 보다는 잘못된 일에 충고를 한다. 이런 공통점들이 이점으로 맞물리기는 하나\
+         이 유형은 연애에 있어 크게 좋은 궁합은 아닌것으로 보인다. \
+         만약 두 남녀가 연애를 한다면 앞만보고 달려가지 말고 잠시 말에서 내려 서로의 감정을 이해하고 보필하는 시간을 가짐이 바람직하다. \
+          \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 1
+          && femaleNumber === 3) {
+          resultTitle2 = "동네를 함께 휘젓는 한쌍의 개와 같은 궁합이로다."
+          resultExplain2 = "\
+          이 도사가 보아하니 둘은 무엇이든 직접 체험해봐야 직성에 풀리는 점이 일치하고 \
+          창조적이고 상상력이 풍부하며 사색을 좋아한다. 또한 외향적인 면모도 일치하니 \
+          실로 육감적인 연애가 가능하구나. 다만, 여자는 조금 예민하고 감정의 \
+          기복도 조금 있는 편이고 남자는 다른 사람의 감정을 보살피는 편이 아니니 \
+          동네를 휘젓다가도 서로에게 상처는 없는지 주기적으로 살펴보는 것이 좋다. \
+           \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 1
+          && femaleNumber === 4) {
+          resultTitle2 = "활시위가 끊어진 활과 화살 같은 궁합이로다."
+          resultExplain2 = "\
+          이 도사가 보아하니 함께 어울려 있으면 그 모습이 어색하진 않으나 서로에게 필요한 부분을 채워주지 못한다.\
+          본디 닮은 점이 많아도 조화롭지 못하다면 그것은 궁합에서 불리하게 작용하고 \
+          다른점이 많아도 그것이 조화롭게 맞물린다면 그것은 궁합에서 유리하게 작용한다. \
+          만약, 연애를 하기 전이라면 결정적인 한 가지가 빠져 연애를 시작하기 다소 어려울 것이고 \
+          연애 중이라면 서로의 의견이 충돌하여 문제가 생기는 상황이 더러 있었을 것이다. \
+          궁합이 좋지는 않으나 겉으로 보기에 어색하지 않다는 이점과 함께 필시 노력으로 극복이 가능할 것으로 보인다. \
+           \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 2
+          && femaleNumber === 1) {
+          resultTitle2 = "한 겨울의 장작불과 같은 궁합이로다."
+          resultExplain2 = "\
+          이 도사가 보아하니 두 사람은 궁합이 좋다. \
+          본디 닮은 점이 많아도 조화롭지 못하다면 그것은 궁합에서 불리하게 작용하고 \
+          다른점이 많아도 그것이 조화롭게 맞물린다면 그것은 궁합에서 유리하게 작용한다. \
+          이 두 사람은 서로에게 부족하거나 과한면을 따뜻하게 채워주기에 한 겨울의 장작불과 같다. \
+          다만, 연애를 시작하기 전이라면 시작하기가 쉽지는 않을 것으로 보이지만 어느 한 쪽이 노력하여 불씨를 틔우면 \
+          서로에게 따뜻한 관계가 형성 될것이다. \
+           \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 2
+          && femaleNumber === 2) {
+          resultTitle2 = "발랄한 강아지와 새침한 고양이 같은 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 둘은 공통된 점 보다는 다른점이 많아 보이지만 \
+          그것이 보기에 조화롭구나. 남자는 자신감이 있고 \
+          성격이 안정되어 있으며 사교성이 있고 사회성도 있는 편이다. 편안하고 협조적이며 의리가 있고 \
+          다른사람의 기분을 살피고 동조를 잘하는구나. 남자의 이러한 성격이\
+          사람을 대할때 약간 새침한 면이 있고 친화성이 낮아 자신이 목표로 하는 일에 집중하는 여자와 좋게 맞물린다. \
+          둘의 궁합은 고양이의 새침함에도 꼬리를 흔들며 다가와 핥아주는 \
+          강아지의 궁합이다. 연애를 하기 전이라면 자신이 어느쪽이든 직접적으로 마음을 표현한다면 어렵지 않게 성공할 것으로 보이고 \
+          연애를 한다면 오래 재미를 볼 수 있을 것이다. \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 2
+          && femaleNumber === 3) {
+          resultTitle2 = "거북이 등에 올라탄 토끼와 같은 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 둘은 같이 다니는 형태가 보기에 좋다.\
+          본디 닮은 점이 많아도 조화롭지 못하다면 그것은 궁합에서 불리하게 작용하고 \
+          다른점이 많아도 그것이 조화롭게 맞물린다면 그것은 궁합에서 유리하게 작용한다. \
+          남자는 침착하고 편안하며 느긋하고 감정적으로 안정 되어있어 잘 흥분하지 않는 편이다. 또한 어떤일을 \
+          할 때는 효울적이고 체계적이며 꼼꼼하게 하는 편이며 집중력이 있고 질서정연한 것을 좋아한다.  \
+          여자는 다른이가 보기에 좋지않은 심술궂고 과시적인 면이 있고 시작은 잘 하지만 끝맺음이 약하고 변덕스러운 면이 있고 잔머리가 발달한편이다.\
+          하지만 남자의 느긋하고 안정된 성격이 그것을 통통튀는 매력으로 바꾸어 보기 좋게 만든다. \
+          여자가 남자의 덕을 보는 궁합이다 \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 2
+          && femaleNumber === 4) {
+          resultTitle2 = "따스한 봄날에 피는 꽃과 같은 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 둘은 궁합이 좋다.\
+          서로 공통된 점이 많고 그것이 이점으로 조화롭게 이루어져 생에 다시 없을 연분이다. \
+          남여 모두 솔직하고 마음이 따뜻하며 측은지심이 많다. 친절하고 겸손하고 협조적이며 공감을 잘 하고 \
+          감정이입이 잘 되는 경향이 보인다. 특히 여자는 옆에서 누가 울면 자신에게는 슬픈 일이 없어도 잘 울고, \
+          누가 웃으면 자신에게 기쁜 일이 없어도 함께 웃어준다. 또 남여 모두 정한 목표를 달성하기 위해서 열심히 노력하고 \
+          맡은 일에 책임을 다하며, 어떤 일을 할때는 체계적이고 꼼꼼하게 일처리를 하는 편이며 집중력과 준비성이 있고 신중하고 세심하며 \
+          규칙이나 약속을 잘 지키고 질서정연한 것을 좋아함에 모든 것이 맞아 떨어질때 비로소 피우는 꽃과 같다.\
+          한 가지 유의할 점은 여자가 근심이 많은 편이라 특별한 이유 없이 불안해지거나 우울해지기도 하며 뭔가를 하고 있지 않으면 \
+          불안감을 느끼기도 하니 남자의 세심한 배려가 필요해 보인다. 허나 이 또한 궁합적으로 크게 안좋지 않으니  \
+          뜨겁게 사랑할뿐이다. \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 3
+          && femaleNumber === 1) {
+          resultTitle2 = "호기로운 사내와 새색시 같은 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 두 사람은 공통된점 보다는 다른 점이 많지만 \
+          다른 점이 맞물리는 형태가 크게 모나지 않아 궁합이 나쁘지 않다. 다만, 관계에서 남자가 주도적 역할을\
+          차지할 것으로 보이는데 이것이 자칫하면 일방적 관계로 발전할 가능성이 있어 주의할 필요가 있어 보인다. \
+          또 보편적으로 자수성가하는 남자들 중에 이 유형이 제일 많은데 여자의 높은 친화성과 잘 맞아 떨어져 \
+          연애궁합과는 별개로 남자가 사업적으로 잘될 궁합이기도 하다. \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 3
+          && femaleNumber === 2) {
+          resultTitle2 = "팽팽히 당겨진 끈과 같은 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 두 사람의 조화는 양보없는 줄다리기를 하고있는 모양새다. \
+          남여 모두 친화성이 낮아 공통점이 모나게 맞물려 단점으로 작용하고 이 외의 특징들도 조화로운게 없으니\
+          연애를 하기도 힘들거니와 하고 있다면 당겨진 끈에 흠집을 내면 끊어지듯 조금의 상처로 인해 관계가 무너질 가능성이 크다. \
+          다만, 벗으로 지내기엔 무리가 없을 궁합이다. \
+           \
+           \
+           \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 3
+          && femaleNumber === 3) {
+          resultTitle2 = "견원지간(犬猿之間) 같은 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 톱날과 톱날을 맞물리듯 두 사람의 특징들이 억세어 \
+          궁합이 좋지않다. 연애를 논하기전에 인간 대 인간으로도 잘 맞지 않을 확률이 크며 \
+          연애를 한다고 한들 서로 이빨을 들이밀기 바쁠것이다. \
+          업무적으로도 다른 유형을 띄기 때문에 하나부터 열까지 맞는 구석이라곤 찾아볼 수 없다. \
+           \
+           \
+           \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 3
+          && femaleNumber === 4) {
+          resultTitle2 = "살 얼음판을 걷는 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 공통점 보다는 다른점이 많이 보이고 \
+          그것이 맞물리는 형태가 좋지않은 모양새다. 이 유형은 처음에는 남자의 노력여부에 따라 \
+          서로가 안맞는 모습이 보이지 않을 확률이 크지만 시간이 지날수록 안개가 걷히듯이 보여 종국에는 여자에게 화근으로 이어지니 \
+          결과가 좋지 않다. 하지만 불행중 다행인 것은 남자가 초심을 지켜 계속해서 여자의 감정을 보필해준다면 \
+          여전히 앞으로 나갈 수 있을것이다. \
+           \
+          "
+          reultImage = 'images/'
+        }
+
+        else if (maleNumber === 4
+          && femaleNumber === 1) {
+          resultTitle2 = "조화로운 거문고와 비파소리 같은 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 두 사람은 다른 점이 많다.\
+          허나 두 소리가 조화로와 매우 아름답다.  \
+          여자의 높은 친화성과 남자의 다소 낮은 친화성이 보기 좋게 맞물리고 \
+          여자는 감정적인 편에 속하고 근심이 많지만 남자는 그것을 호기있게 안아줄 수 있다. \
+          다만 한 가지, 남자는 연애에 책임감이 있지만 감정표현을 잘 하지는 않으며 아기자기한 사랑을 하는 유형은 \
+          아닐 것으로 판단되어 자칫하면 여자가 지쳐 식어버리는 상황이 올 수 있다. \
+           \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 4
+          && femaleNumber === 2) {
+          resultTitle2 = "백 척 높이의 장대 위에 올라선 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 둘의 궁합은 맞지 않다.\
+          서로가 다른 부분이 송곳처럼 튀어나와 각자를 향해있으니 보기에 좋지않다.\
+          특히나 남자는 주도적이고 지배적이며 집요한 면이 있고 다른 사람이 자신을 따라 주기를 바라는 유형이 보이는 \
+          반면에 여자는 다소 예민하고 격식에 얽매이는 것을 싫어하고 성공을 향한 열망이 있다. 이 두 가지 특징이 \
+          큰 단점으로 작용하기에 둘의 연애는 순탄하지 않을것이다. 그러므로 장대위에 올라선 형태고 \
+          미풍에도 잘 흔들릴 것이다. \
+           \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 4
+          && femaleNumber === 3) {
+          resultTitle2 = "맞지 않는 신발을 신은 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 둘은 모난부분이 억세게 맞물려 서로에게 몹시 피곤하다.\
+          본디 닮은 점이 많아도 조화롭지 못하다면 그것은 궁합에서 불리하게 작용하고 \
+          다른점이 많아도 그것이 조화롭게 맞물린다면 그것은 궁합에서 유리하게 작용한다. \
+          남자는 다소 딱딱하고 엄격하며 주도적이고 집요한 면이 있는데 \
+          여자는 성실함이 낮고 꼼꼼하지 않으며 꾸준함이 없고 끝맺음이 약하다\
+          또한 잔머리가 발달하였고 심술궂고 과시적인 면모가 보인다. 서로의 성격이 조화롭지 못하여 만난다면 맞지 않는 신발을 신은 듯한 합이다. \
+           \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 4
+          && femaleNumber === 4) {
+          resultTitle2 = "금이나 난초와 같이 귀하고 향기로운 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 둘의 인연은 쉽게 찾아오지 않는 인연이다.\
+          두 사람 모두 자신의 포부를 이루려 노력하는 것이 좋고 외향적인 면모가 보인다. \
+          여자의 높은 친화성은 착하고 마음이 따뜻하며 측은지심이 많고 동시에 높은 신경성은 자신이 했던 행동을 되새김질 한다.\
+          이런 면모는 남자의 주도적이고 선두에 나서서 다른 사람이 자신을 따라 주기를 바라는 유형과 보기가 참 좋다. \
+          또한 남여 모두 규칙이나 약속을 중요시 여기고 질서정연한 것을 좋아한다. \
+          다만, 유의할 점은 여자는 특별한 이유 없이 불안해지거나 우울해지는 경향이 있는데 남자는 근심이 많지 않아 보이니 \
+          남자에게 많이 기대어도 무방하고 남자도 잘 받아주는게 좋다. \
+           \
+          "
+          reultImage = 'images/'
+        }
+
+        else if (maleNumber === 5
+          && femaleNumber === 1) {
+          resultTitle2 = "뭍으로 배를 저으려는 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 둘의 궁합은 좋지 않다.\
+          둘은 닮은 점은 거의 찾아 볼 수 없고 다른점만이 가득한데 조화롭게 작용하는 맞물림의 형태가 극히 적고 \
+          특이하게도 남자는 크게 영향을 받지 않지만 여자에게만 단점으로 작용하여 불리하다. \
+          남자의 심술궂고 욱하는 면은 여자의 온순하고 약한 마음과 상극이다. \
+          또한 이 유형의 남자는 자극과 오락을 추구하는데 정서적 안정성이 떨어지고 중독에 약한 편이다. \
+          이것은 부정적 감정에 민감하고 모든 면에 조심하는 편인 여자에게 큰 근심으로 이어진다. \
+          그러니 두 사람이 나아가려 해도 뭍으로 배를 저으려는 모양새니 궁합이 좋지 않다.\
+          "
+
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 5
+          && femaleNumber === 2) {
+          resultTitle2 = "나무하는 사내와 물긷는 아낙네와 같은 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 둘은 공통점 보다 다른점이 많이 보이고 그것이 좋은 합은 아니지만 나쁜 합도 아니기 때문에 지극히 평범하다. \
+          남자는 자극과 오락을 추구하고 변화에 대한 욕구가 강해 새로운 생각이 풍부하고 즉흥적이며 예민하고 집요한면과 사명감이 있는데 이는 \
+          여자의 다른이의 생각이나 느낌을 쉽게 받아들이는 성격과 잘 맞아 연애보다는 업무관계에서 합이 좋다. \
+          그리고 여자의 약간 새침한 면모는 남자의 장난을 좋아하는 것에 약간 이점이 보이지만 그리 큰것은 아니다. \
+          전체적으로 연애에 있어서 크게 좋고 나쁜 궁합이 나오지 않는다. \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 5
+          && femaleNumber === 3) {
+          resultTitle2 = "조개와 도요새간의 다툼과 같은 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 두 사람은 닮은 점이 많고 그것이 모나게 맞물려 조화롭지 못하다. \
+          두 사람 모두 욱하는 성격이 있고 심술궂고 과시적인 면이 있다. \
+          이런 유형의 사람은 다른 정반대의 유형과 합이 어울리는 경우가 많으며  \
+          같은 유형의 사람을 만나면 서로가 피곤하여 오래 만나지 못할 궁합이다. \
+          다만, 둘 다 다른 사람의 관심과 주목을 받는 것을 좋아하고 활동적이고 긍정적인 사고를 가지고 있는 면모가 보이는데 \
+          이는 연애보다는 벗으로서 둘도 없는 합을 이룰 수 있다. \
+          "
+          reultImage = 'images/'
+        }
+        else if (maleNumber === 5
+          && femaleNumber === 4) {
+          resultTitle2 = "삼 옆의 쑥대와 같은 궁합이로다."
+          resultExplain2 = "이 도사가 보아하니 남자가 여자의 덕을 볼 궁합이다.\
+          여자는 신중하고 세심하며 규칙이나 약속을 잘 지키고 착하고 솔직하고 마음이 따뜻하며 동정심이 많고 \
+          친절하고 겸손하고 협조적이고 공감을 잘 하고 감정이입이 잘 되는 경향이 있다. 옆에서 누가 울면 자신에게는 슬픈 일이 없어도 잘 울고, 옆에서 누가 웃으면 자신에게 기쁜 일이 없어도 함께 웃어준다. \
+          이는 정서적 안정성이 떨어지는 남자를 채워줄 수 있고 변덕스러운 면과 욱하는 성격, 그리고 심술궂은면을 상당부분 완화시켜준다. \
+          그러니 그 형태가 마치 꾸불꾸불 자라게 마련인 쑥대도 삼밭에 나면 손을 쓰지 않아도 삼처럼 곧게 자라는 형태이다.\
+           \
+           \
+          "
+          reultImage = 'images/'
+        }
+
+
+        var title2 = "<div class='" + prediction[0].className + "-character-title'>" + resultTitle2 + "</div>"
+        var explain2 = "<div class='characterl-explain pt-2'>" + resultExplain2 + "</div>"
+
+        $('.result-message3').html(title2);
+        $('.result-message4').html(explain2);
+
+        // var create_img_element = function (total, targetId) {
+        //   var img = document.createElement('img');
+        //   img.src = reultImage + total + '.jpg';
+        //   document.getElementById(targetId).appendChild(img);
+        // }
+
+        // //결과 이미지 출력
+
+        // create_img_element(1, 'foo');
+
+      }
+    }
+
+
+  </script>
+  <script src="assets\js\main.js"></script>
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/d3js/6.2.0/d3.min.js"></script>
+  <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+ 
+<footer id="footer">
+    <div class="copyright">
+      <br> blog_geon@naver.com <br>   <section class="container blog "> 
+      <div>제작도움 : JoCoding <a
+        href=" https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg" title="youtube">youtube</a> and <a href="https://developerdk.tistory.com/" title="blog">blog</a>
+      </div>
+      </section>
+      <div>Icons made by <a href="https://www.flaticon.com/kr/authors/freepik" title="Freepik">Freepik</a> from <a
+          href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
+     
+
+
+    </div>
+  </footer>
+  </section>
+  </div>
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fc7851441748898"></script>
+  </div>
+  </div>
+</body>
+
+</html>
+
+
+</html>

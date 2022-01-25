@@ -21,7 +21,7 @@ https://play.google.com/store/apps/details?id=com.cottonwood.loverface
 ㅤ  
 ## info
 ㅤ  
-[깃허브 저장소](https://github.com/Cottonwood-moa/characterTest)  
+[깃허브 저장소](https://github.com/Cottonwood-moa/loverface)  
 ㅤ  
 ![20220125212331](https://user-images.githubusercontent.com/79053495/150976449-6a36c901-8ac4-4cc2-b007-899cf3b93be8.png)
 ㅤ  
